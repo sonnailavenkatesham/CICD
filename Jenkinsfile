@@ -4,7 +4,7 @@ pipeline{
         stage("config"){
             steps{
                 sh ' ls -lts'
-                sh 'echo Hello swapna > tmp/name.txt'
+                sh 'pwd'
             }
         }
     }
