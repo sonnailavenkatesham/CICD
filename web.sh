@@ -16,16 +16,8 @@ echo -e "$G enabled nginx $N"
 systemctl start nginx
 echo -e "$G started nginx $N"
 
-rm -rf /usr/share/nginx/html/*
-echo -e "$G default nginx page deleted $N"
-curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip
+echo "Hi Swapna" > /usr/share/nginx/html/swapna.html
 
-cd /usr/share/nginx/html
-echo -e "$G changed to html folder $N"
-unzip /tmp/web.zip
-echo -e "$G unziped web data $N"
-
-cp /home/centos/swapna-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl restart nginx 
 echo -e "$G restarted nginx $N"
