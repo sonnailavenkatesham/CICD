@@ -3,8 +3,13 @@ pipeline{
     stages{
         stage("config"){
             steps{
-                sh ' ls -lts'
-                sh 'pwd'
+                sh''' 
+                ls -ltr
+                pwd 
+                cd ../
+                mkdir name
+                echo Hi swapna > name/file.txt
+               '''
             }
         }
     }
