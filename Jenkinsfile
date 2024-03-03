@@ -1,14 +1,11 @@
 pipeline{
-    agent any
+    agent { node { label 'Web' } }
     stages{
         stage("config"){
             steps{
                 sh''' 
                 ls -ltr
                 pwd 
-                cd ../
-                mkdir name
-                echo Hi swapna > name/file.txt
                '''
             }
         }
